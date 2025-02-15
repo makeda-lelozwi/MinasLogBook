@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+html,
+body {
+  background-color: #8b9671;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 100%; /* Ensure the body takes up the full width */
+  max-width: 100%; /* Prevent the body from exceeding the viewport width */
+}
