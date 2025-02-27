@@ -1,5 +1,11 @@
 import { Component } from '@angular/core';
-import { faBarsProgress, faCar, faChartLine, faLocationDot, faMicrophone, faStar } from '@fortawesome/free-solid-svg-icons';
+import {   faBarsProgress,
+  faCar,
+  faChartLine,
+  faLocationDot,
+  faMicrophone,
+  faStar,
+} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -14,5 +20,5 @@ export class AppComponent {
   location = faLocationDot;
   car = faCar;
   chartLine = faChartLine;
-
+ 
 }
