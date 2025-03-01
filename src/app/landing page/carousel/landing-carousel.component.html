@@ -1,0 +1,14 @@
+<div>
+  <h4>select a character to explore</h4>
+</div>
+<div class="carousel">
+    <div
+      *ngFor="let character of characters"
+      class="character-div {{ character }} col-sm"
+      [routerLink]="['/log', character]"
+    >
+      <img [src]="'/' + character + '.jpg'" alt="" class="character-img" />
+      <h3>{{ character }}</h3>
+    </div>
+  </div>
+

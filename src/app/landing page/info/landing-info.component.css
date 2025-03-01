@@ -1,0 +1,69 @@
+.info-div {
+  width: 900px;
+  height: 120px;
+  border-radius: 2em;
+}
+
+.background-flower-img {
+  height: 100px;
+  width: 400px;
+  object-fit: cover;
+  position: absolute;
+  left: 300px;
+  top: 30px;
+  border-radius: 150px 150px 0 0;
+}
+
+.layer {
+  position: absolute;
+}
+
+.see-through-glass-effect {
+  width: 900px;
+  height: 140px;
+  /* From https://css.glass */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(13.6px);
+  -webkit-backdrop-filter: blur(13.6px);
+  border-radius: 1em;
+  position: absolute;
+  z-index: 1;
+}
+
+.glare-container {
+  width: 600px;
+  height: 100%;
+  border-radius: 10% 50% 50% 10%;
+  background: radial-gradient(
+    farthest-corner at 10px 40px,
+    #a5efff 0%,
+    #6ebff439 60%,
+    #4672d400 100%
+  );
+  filter: blur(10px);
+  opacity: 0.4;
+  position: absolute;
+  z-index: 2;
+  left: 5px;
+}
+
+.overlay-text {
+  padding: 1.5rem;
+  position: absolute;
+  z-index: 3;
+}
+
+.useful-features {
+  height: 180px;
+  background-color: #d9d7d7;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.35);
+}
+
+.feature-text {
+  display: flex;
+  gap: 5px;
+}
+
+.text {
+  padding: 1.5rem;
+}

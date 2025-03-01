@@ -1,0 +1,29 @@
+nav {
+  height: 40px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 100%;
+  font-family: "Josefin Sans";
+  font-size: 30px;
+  padding: 0.1em 0.5em;
+  color: #ecedef;
+}
+.project-name {
+  font-family: "Jockey One" !important;
+}
+
+.title-text {
+  color: #024023;
+  font-family: "Instrument Sans";
+}
+
+.main-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+}

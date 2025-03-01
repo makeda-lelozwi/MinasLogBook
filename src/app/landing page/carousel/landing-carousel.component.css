@@ -1,0 +1,73 @@
+.carousel {
+  display: flex; /* Make the parent container a flexbox */
+  flex-direction: row;
+  gap: 1em;
+}
+
+.character-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.mina {
+  color: #791419;
+}
+
+.tomoko {
+  color: #0b1076;
+}
+
+.yoneda {
+  color: #892b81;
+}
+
+.character-img {
+  height: 120px;
+  width: 120px;
+  border-radius: 100%;
+}
+
+.character-img:hover {
+  height: 150px;
+  width: 150px;
+  transition: ease-in 0.1s;
+}
+
+.mina .character-img {
+  -webkit-box-shadow: 0.5px 0.5px 21.5px -4.5px #ba484e;
+  -moz-box-shadow: 0.5px 0.5px 21.5px -4.5px #ba484e;
+  box-shadow: 0.5px 0.5px 21.5px -4.5px #ba484e;
+}
+
+.mina .character-img:hover {
+  -webkit-box-shadow: 0.5px 0.5px 22.5px 6.5px #ba484e;
+  -moz-box-shadow: 0.5px 0.5px 22.5px 6.5px #ba484e;
+  box-shadow: 0.5px 0.5px 22.5px 6.5px #ba484e;
+}
+
+.yoneda .character-img {
+  -webkit-box-shadow: 0.5px 0.5px 21.5px -4.5px #892b81;
+  -moz-box-shadow: 0.5px 0.5px 21.5px -4.5px #892b81;
+  box-shadow: 0.5px 0.5px 21.5px -4.5px #892b81;
+}
+
+.yoneda .character-img:hover {
+  -webkit-box-shadow: 0.5px 0.5px 22.5px 6.5px #892b81;
+  -moz-box-shadow: 0.5px 0.5px 22.5px 6.5px #892b81;
+  box-shadow: 0.5px 0.5px 22.5px 6.5px #892b81;
+}
+
+.tomoko .character-img {
+  -webkit-box-shadow: 0.5px 0.5px 21.5px -4.5px #4a648a;
+  -moz-box-shadow: 0.5px 0.5px 21.5px -4.5px #4a648a;
+  box-shadow: 0.5px 0.5px 21.5px -4.5px #4a648a;
+}
+
+.tomoko .character-img:hover {
+  -webkit-box-shadow: 0.5px 0.5px 22.5px 6.5px #4a648a;
+  -moz-box-shadow: 0.5px 0.5px 22.5px 6.5px #4a648a;
+  box-shadow: 0.5px 0.5px 22.5px 6.5px #4a648a;
+}
