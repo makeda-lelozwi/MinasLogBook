@@ -6,14 +6,29 @@ import { ActivatedRoute } from '@angular/router';
   styleUrl: './base-character.component.css',
 })
 export class BaseCharacterComponent implements OnInit, OnDestroy {
-  characterID: string | null = null;
+  activeCharacter: string = '';
+  characters: string[] = ['mina', 'tomoko', 'yoneda'];
+  private previousBgClass: string = '';
 
   constructor(private renderer: Renderer2, private route: ActivatedRoute) {}
   ngOnInit(): void {
-    this.characterID = this.route.snapshot.paramMap.get('character');
-    this.renderer.addClass(document.body, `${this.characterID}-bg-color`);
+    // this.characterID = this.route.snapshot.paramMap.get('character');
+    this.route.paramMap.subscribe((params) => {
+      const newCharacter = params.get('character') || '';
+
+      if (this.previousBgClass) {
+        this.renderer.removeClass(document.body, this.previousBgClass);
+      }
+
+      this.activeCharacter = newCharacter;
+      const newBgClass = `${this.activeCharacter}-bg-color`;
+      this.renderer.addClass(document.body, newBgClass);
+      this.previousBgClass = newBgClass;
+    });
   }
   ngOnDestroy(): void {
-    this.renderer.removeClass(document.body, `${this.characterID}-bg-color`);
+    if (this.previousBgClass) {
+      this.renderer.removeClass(document.body, this.previousBgClass);
+    }
   }
 }

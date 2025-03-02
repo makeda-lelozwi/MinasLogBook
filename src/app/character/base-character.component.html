@@ -1,4 +1,7 @@
-<p>base-character works!</p>
+<app-navigation
+  [characters]="characters"
+  [activeCharacter]="activeCharacter"
+></app-navigation>
 <div class="character-img-container">
   <div>
     <div class="layer see-through-glass-effect"></div>
@@ -9,6 +12,10 @@
         <button class="feature-btn">Favourites</button>
       </div>
     </div>
-    <img [src]="'/' + characterID + '.jpg'" alt="" class="character-bg-img" />
+    <img
+      [src]="'/' + activeCharacter + '.jpg'"
+      alt=""
+      class="character-bg-img"
+    />
   </div>
 </div>

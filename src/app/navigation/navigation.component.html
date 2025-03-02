@@ -1,0 +1,14 @@
+<nav>
+  <p class="project-name title-text" [ngClass]="activeCharacter + '-active'">
+    Mina's Logbook
+  </p>
+  <div class="nav-tabs" *ngFor="let character of characters">
+    <p
+      [routerLink]="['/log', character]"
+      [routerLinkActive]="character + '-active'"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      {{ character | uppercase }}
+    </p>
+  </div>
+</nav>

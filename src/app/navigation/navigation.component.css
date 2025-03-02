@@ -1,0 +1,35 @@
+nav {
+  height: 40px;
+  margin-top: 5px;
+  margin-bottom: 0.5em;
+  width: 100%;
+  font-family: "Josefin Sans";
+  font-size: 30px;
+  padding: 0.1em 0.5em;
+  color: #ecedef;
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-name {
+  font-family: "Jockey One";
+}
+
+.nav-tabs {
+  display: flex;
+  /* gap: 1em; */
+  justify-content: right;
+  border-bottom: 0px;
+}
+
+.mina-active {
+  color: #66048c;
+}
+
+.tomoko-active {
+  color: #121898;
+}
+
+.yoneda-active {
+  color: #8c048a;
+}

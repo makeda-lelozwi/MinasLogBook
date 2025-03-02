@@ -8,6 +8,7 @@ import { BaseCharacterComponent } from './character/base-character.component';
 import { LandingComponent } from './landing page/landing.component';
 import { LandingInfoComponent } from './landing page/info/landing-info.component';
 import { LandingCarouselComponent } from './landing page/carousel/landing-carousel.component';
+import { NavigationComponent } from './navigation/navigation.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { LandingCarouselComponent } from './landing page/carousel/landing-carous
     BaseCharacterComponent,
     LandingComponent,
     LandingInfoComponent,
-    LandingCarouselComponent
+    LandingCarouselComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,
