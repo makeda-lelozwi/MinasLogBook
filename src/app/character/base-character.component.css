@@ -1,0 +1,48 @@
+.character-img-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.character-bg-img {
+  border-radius: 1em;
+}
+
+.layer {
+  position: absolute;
+}
+
+.see-through-glass-effect {
+  width: 1030px;
+  height: 100%;
+  /* From https://css.glass */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(13.6px);
+  -webkit-backdrop-filter: blur(13.6px);
+  border-radius: 1em;
+  position: absolute;
+  z-index: 1;
+}
+
+.overlay-text {
+  position: absolute;
+  z-index: 3;
+  width: 400px;
+  color: #ffffff;
+  padding-left: 2rem;
+  padding-top: 4rem;
+  font-family: "Instrument Sans";
+}
+
+.feature-btn {
+  border-radius: 1.5em;
+  border-color: transparent;
+  background-color: #d9d9d9;
+  padding: 0.5rem 1rem;
+  margin-right: 1rem;
+  color: #2F0241;
+  font-weight: bold;
+  box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, .25);
+}
+
+
