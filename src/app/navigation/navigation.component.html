@@ -1,5 +1,9 @@
 <nav>
-  <p class="project-name title-text" [ngClass]="activeCharacter + '-active'">
+  <p
+    class="project-name title-text"
+    [ngClass]="activeCharacter + '-active'"
+    routerLink="/"
+  >
     Mina's Logbook
   </p>
   <div class="nav-tabs" *ngFor="let character of characters">

@@ -20,6 +20,7 @@ nav {
   /* gap: 1em; */
   justify-content: right;
   border-bottom: 0px;
+  font-weight: bold;
 }
 
 .mina-active {
