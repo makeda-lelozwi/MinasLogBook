@@ -1,16 +1,9 @@
-<app-navigation
-  [characters]="characters"
-  [activeCharacter]="activeCharacter"
-></app-navigation>
-<div class="character-img-container">
+<app-navigation [activeCharacter]="activeCharacter"></app-navigation>
+<div class="flex items-center justify-center">
   <div>
-    <div class="layer see-through-glass-effect"></div>
-    <div class="layer overlay-text">
-      <!-- <h2>CREATE NEW RECORDS OR GO DOWN MEMORY-LANE WITH YOUR FAVOURITES</h2> -->
-      <div class="column">
-        <button class="feature-btn">New record</button>
-        <button class="feature-btn">Favourites</button>
-      </div>
+    <div class="absolute see-through-glass-effect"></div>
+    <div class="absolute z-10 text-white pl-8 pt-16 w-96 overlay-text">
+      <router-outlet></router-outlet>
     </div>
     <img
       [src]="'/' + activeCharacter + '.jpg'"

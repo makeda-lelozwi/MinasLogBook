@@ -9,6 +9,7 @@ import { LandingComponent } from './landing page/landing.component';
 import { LandingInfoComponent } from './landing page/info/landing-info.component';
 import { LandingCarouselComponent } from './landing page/carousel/landing-carousel.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { FormComponent } from './components/form/form.component';
 
 @NgModule({
   declarations: [
@@ -17,13 +18,13 @@ import { NavigationComponent } from './navigation/navigation.component';
     LandingComponent,
     LandingInfoComponent,
     LandingCarouselComponent,
-    NavigationComponent
+    FormComponent,
+    BaseViewComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
-  ],
+    FontAwesomeModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent]
 })
