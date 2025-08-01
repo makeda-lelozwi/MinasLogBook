@@ -7,7 +7,6 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class BaseCharacterComponent implements OnInit, OnDestroy {
   activeCharacter: string = '';
-  characters: string[] = ['mina', 'tomoko', 'yoneda'];
   private previousBgClass: string = '';
 
   constructor(private renderer: Renderer2, private route: ActivatedRoute) {}
