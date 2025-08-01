@@ -26,6 +26,7 @@ import { BaseViewComponent } from './character/base-view/base-view.component';
     LandingComponent,
     LandingInfoComponent,
     LandingCarouselComponent,
+    NavigationComponent,
     FormComponent,
     CardComponent,
     BaseViewComponent
