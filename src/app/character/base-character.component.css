@@ -1,15 +1,6 @@
-.character-img-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 .character-bg-img {
   border-radius: 1em;
-}
-
-.layer {
-  position: absolute;
 }
 
 .see-through-glass-effect {
@@ -25,24 +16,11 @@
 }
 
 .overlay-text {
-  position: absolute;
-  z-index: 3;
-  width: 400px;
-  color: #ffffff;
-  padding-left: 2rem;
-  padding-top: 4rem;
   font-family: "Instrument Sans";
 }
 
 .feature-btn {
-  border-radius: 1.5em;
-  border-color: transparent;
-  background-color: #d9d9d9;
-  padding: 0.5rem 1rem;
-  margin-right: 1rem;
-  color: #2F0241;
-  font-weight: bold;
-  box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, .25);
+    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, .25);
 }
 
 
