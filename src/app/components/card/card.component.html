@@ -1,0 +1,12 @@
+<div class="flex mt-2 gap-2" >
+ <div class="" *ngFor="let story of stories; let i = index">
+    <div class="bg-[#2F0241] text-white rounded-lg cursor-pointer p-2 min-w-52 min-h-20">
+      <h5><strong>{{story.title}}</strong></h5>
+      <button class="mt-2" (click)="deleteStory(i)">Delete</button>
+    </div>
+  </div>
+
+  <div *ngIf="stories.length === 0">
+    <p>No stories yet!</p>
+  </div>
+</div>
