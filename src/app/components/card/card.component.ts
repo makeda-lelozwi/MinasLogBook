@@ -2,6 +2,7 @@ import { Component, inject, OnDestroy, OnInit } from '@angular/core';
 import { SharedSoriesService } from '../../services/shared/shared-sories.service';
 import { Subject, takeUntil } from 'rxjs';
 import { StoryRecord } from '../../models/story.model';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-card',
@@ -13,7 +14,7 @@ export class CardComponent implements OnInit, OnDestroy {
   private destroy$ = new Subject<void>();
 
   stories: StoryRecord[] = [];
-
+  deleteLogo=faTrash;
   ngOnInit(): void {
     this.sharedStoriesService.stories$
       .pipe(takeUntil(this.destroy$))
