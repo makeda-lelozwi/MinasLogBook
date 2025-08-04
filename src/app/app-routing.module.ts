@@ -4,6 +4,7 @@ import { BaseCharacterComponent } from './character/base-character.component';
 import { LandingComponent } from './landing page/landing.component';
 import { FormComponent } from './components/form/form.component';
 import { BaseViewComponent } from './character/base-view/base-view.component';
+import { StoryDetailComponent } from './components/story-detail/story-detail.component';
 
 const routes: Routes = [
   { path: '', component: LandingComponent },
@@ -13,6 +14,7 @@ const routes: Routes = [
     children: [
       { path: '', component: BaseViewComponent },
       { path: 'new', component: FormComponent },
+      { path: ':story', component: StoryDetailComponent },
     ],
   },
 ];

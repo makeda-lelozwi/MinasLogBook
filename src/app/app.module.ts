@@ -17,6 +17,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { FormComponent } from './components/form/form.component';
 import { CardComponent } from './components/card/card.component';
 import { BaseViewComponent } from './character/base-view/base-view.component';
+import { StoryDetailComponent } from './components/story-detail/story-detail.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { BaseViewComponent } from './character/base-view/base-view.component';
     NavigationComponent,
     FormComponent,
     CardComponent,
-    BaseViewComponent
+    BaseViewComponent,
+    StoryDetailComponent
   ],
   imports: [
     BrowserModule,
