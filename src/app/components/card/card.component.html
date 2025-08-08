@@ -1,11 +1,13 @@
 <ng-container class="relative flex pb-4 gap-4 w-full flex-wrap flex-1" *ngFor="let story of stories; let i = index">
 
-  <div [routerLink]="[story.id]" class="bg-[#66048c91] text-white rounded-lg cursor-pointer p-2 w-60 h-24 flex">
-    <img class="w-14 h-14 rounded-lg m-1" src="/ElephantStory.jpg" alt="">
+  <div class="bg-[#66048c91] text-white rounded-lg cursor-pointer p-2 ">
+    <div [routerLink]="[story.id]" class="flex w-60 h-24" >
+      <img class="w-20 h-20 rounded-lg m-1" src="/ElephantStory.jpg" alt="">
     <div>
       <h5><strong>{{story.title}}</strong></h5>
-      <button class="mt-2" (click)="deleteStory(i)"><fa-icon class="mr-1" [icon]="deleteLogo"></fa-icon> Delete</button>
     </div>
+    </div>
+    <button class="mt-2" (click)="deleteStory(i)"><fa-icon class="mr-1" [icon]="deleteLogo"></fa-icon> Delete</button>
   </div>
 </ng-container>
 

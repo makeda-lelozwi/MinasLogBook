@@ -47,8 +47,30 @@ The bulk of the work for Mina's 'dashbiards' are done. If she was a real person,
 
   3. Styling for the story detail was also a bit of a pain trying to get the text to take up a larger amount of space but also enable the scrollbar if need-be (that wasn't an issue, the issue was that it would immediately mess up my design)
 
+### SCREEN GRABS
+
+#### LANDING PAGE
+All the features I would like to implement in this project over time (ignore voice-to-speech lol)
+
+![alt text](<public/screenshots/Screenshot 2025-08-08 235553.png>)
+
+MOCKUP:
+![alt text](<public/screenshots/Screenshot 2025-08-09 002721.png>)
+
+#### MINA'S MAIN PAGE
+This is where Mina can view all the stories she has written for each Matchbox she has collected. I've added a base picture for each matchbox for now (Generated with OpenArt AI to correspond with the actual matchbox images that inspired Mina to write mini stories in the novel).
+
+![alt text](<public/screenshots/Screenshot 2025-08-08 232533.png>)
+
+MOCKUP:
+![alt text](<public/screenshots/Screenshot 2025-08-09 002737.png>)
+
+##### UPLOADING A NEW STORY
+![alt text](<public/screenshots/Screenshot 2025-08-08 232553.png>)
+
+##### RE-READING OLDER STORIES
+![alt text](<public/screenshots/Screenshot 2025-08-08 232615.png>)
 
 ### Next step: Update db to include image field and implement functionality to UPDATE the story entries 
-
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.2.
