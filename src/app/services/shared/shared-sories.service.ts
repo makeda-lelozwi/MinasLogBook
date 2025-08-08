@@ -1,11 +1,10 @@
 import { Injectable,inject } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, catchError, Observable, throwError } from 'rxjs';
 import { StoryRecord } from '../../models/story.model';
 import { StoryService } from '../story.service';
 
-
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class SharedSoriesService {
   private storyService = inject(StoryService);
@@ -13,21 +12,30 @@ export class SharedSoriesService {
   private storiesSubject = new BehaviorSubject<StoryRecord[]>([]);
 
   public stories$ = this.storiesSubject.asObservable();
-  constructor() { }
+  constructor() {}
 
   loadStories(): Observable<StoryRecord[]> {
     const storiesObservable = this.storyService.getStories();
-    
+
     storiesObservable.subscribe({
       next: (stories) => {
         this.storiesSubject.next(stories);
       },
       error: (error) => {
         console.error('Error loading stories:', error);
-      }
+      },
     });
-    
+
     return storiesObservable;
+  }
+
+  loadStory(id: number): Observable<StoryRecord> {
+    return this.storyService.getStory(id).pipe(
+      catchError((error) => {
+        console.error('Error loading stories:', error);
+        return throwError(() => error);
+      })
+    );
   }
 
   getStoriesSnapshot(): StoryRecord[] {
@@ -37,18 +45,20 @@ export class SharedSoriesService {
   removeStory(storyId: number): void {
     const currentStories = this.storiesSubject.value;
     //filtering out the story we want to remove from view then rerendering
-    const updatedStories = currentStories.filter(story => story.id !== storyId);
+    const updatedStories = currentStories.filter(
+      (story) => story.id !== storyId
+    );
     this.storiesSubject.next(updatedStories);
   }
 
   //used in the form component
-   addStory(story: StoryRecord): void {
+  addStory(story: StoryRecord): void {
     const currentStories = this.storiesSubject.value;
     this.storiesSubject.next([...currentStories, story]);
   }
 
-   createStory(story: StoryRecord): Observable<StoryRecord> {
-    return new Observable(observer => {
+  createStory(story: StoryRecord): Observable<StoryRecord> {
+    return new Observable((observer) => {
       this.storyService.createStory(story).subscribe({
         next: (createdStory) => {
           this.addStory(createdStory);
@@ -57,9 +67,8 @@ export class SharedSoriesService {
         },
         error: (error) => {
           observer.error(error);
-        }
+        },
       });
     });
   }
-
 }

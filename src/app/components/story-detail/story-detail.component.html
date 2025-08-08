@@ -1,1 +1,21 @@
-<p>story-detail works!</p>
+
+<div class="flex gap-10 w-[40rem] max-h-[80vh] ">
+<div class="min-w-72 min-h-20 max-h-60 rounded-lg">
+  <img class="rounded-lg" src="/ElephantStory.jpg" alt="">
+  <button class="mt-2" (click)="goBack()"><fa-icon class="mr-1" [icon]="backLogo"></fa-icon></button>
+</div>
+
+<div class="bg-[#66048c91] rounded-md p-2 min-w-full overflow-auto">
+  <h2 class="text-2xl font-semibold  ">
+    {{currentStory?.title}}
+  </h2>
+   
+  <p class="text-sm italic">{{currentStory?.dateCreated | date:'MMM d, y'}}</p>
+  <p class="mt-2">
+    {{currentStory?.plot}}
+  </p>
+</div>
+</div>
+
+
+
