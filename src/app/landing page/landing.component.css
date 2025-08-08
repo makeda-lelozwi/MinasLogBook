@@ -17,13 +17,4 @@ nav {
   font-family: "Instrument Sans";
 }
 
-.main-display {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 16px;
-  box-sizing: border-box;
-}
+

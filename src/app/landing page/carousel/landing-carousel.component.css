@@ -5,6 +5,7 @@
 }
 
 .character-div {
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,11 +31,11 @@
   border-radius: 100%;
 }
 
-.character-img:hover {
+/* .character-img:hover {
   height: 150px;
   width: 150px;
   transition: ease-in 0.1s;
-}
+} */
 
 .mina .character-img {
   -webkit-box-shadow: 0.5px 0.5px 21.5px -4.5px #ba484e;
