@@ -18,22 +18,31 @@ export class FormComponent {
   private isFormValid(): boolean {
     return (
       this.currentRecord.title.trim() !== '' &&
-      this.currentRecord.plot.trim() !== '' && 
-      this.currentRecord.plot.trim().length <= 1000
+      this.currentRecord.plot.trim() !== ''
     );
   }
 
   saveStory() {
     if (this.isFormValid()) {
-      this.sharedServ.createStory(this.currentRecord);
-      console.log('Successfully saved record');
+      this.sharedServ.createStory(this.currentRecord).subscribe({
+        next: (createdStory) => {
+          console.log('Successfully saved record', createdStory);
+          this.resetForm();
+          this.goBack();
+        },
+        error: (error) => {
+          console.error('Error saving story:', error);
+          // Optionally show error to user
+        },
+      });
+      // console.log('Successfully saved record');
     } else {
       console.error('Invalid form submission');
       return;
     }
 
-    this.resetForm();
-    this.goBack();
+    // this.resetForm();
+    // this.goBack();
   }
 
   resetForm() {
