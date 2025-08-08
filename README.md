@@ -28,7 +28,14 @@ I created mock-ups using Figma which took 2 days to get a general idea of the pa
 
   4. The last challenge so far was getting the page colours and nav colors to switch when toggling between characters. With some help from DeepSeek I managed and now the project is off the ground. 
 
-### Next step: Create C# CLasses to represent Mina's Matchbox Collection 
+### Checkpoint Two: Create C# CLasses to represent Mina's Matchbox Collection 
+Date completed: 2025.07.28
+I first took a C# Masterclass on Udemy (still in-progress). Then read up on .NET Entity Framework before implementing it with an ASP.NET Web API. 
+
+I didn't face many challenges because EF's documentation is very robust. I did use Cluade to help with installing certain .NET libraries and using the correct CLI commands but in general, the official documentation for Web API was very straight-forward. I spent some time also learning up on ADO.NET and how ORM's work overall.
+
+
+### Next step: Implement CRUD functionality for Mina 
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.2.
