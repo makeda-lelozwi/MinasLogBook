@@ -1,12 +1,16 @@
-<h2 class="text-2xl font-semibold">{{ text | uppercase }}</h2>
+<div class="flex gap-5 flex-wrap w-[65rem] overflow-y-auto max-h-[80vh]">
+  <div class="max-w-96 max-h-40">
+    <h2 class="text-2xl font-semibold">{{ text | uppercase }}</h2>
+    <div *ngIf="activeCharacter === 'mina'" class="flex mt-2">
+      <button class="feature-btn rounded-3xl border-transparent bg-[#d9d9d9] py-2 px-4 mr-4 text-[#2F0241] font-bold"
+        (click)="NavigateToNewStoryForm()">New story</button>
+      <button
+        class="feature-btn rounded-3xl border-transparent bg-[#d9d9d9] py-2 px-4 mr-4 text-[#2F0241] font-bold ">Favourites</button>
+    </div>
+  </div>
 
-<div *ngIf="activeCharacter === 'mina'" class="column mt-2">
-  <button class="feature-btn rounded-3xl border-transparent bg-[#d9d9d9] py-2 px-4 mr-4 text-[#2F0241] font-bold"
-    (click)="NavigateToNewStoryForm()">New story</button>
-  <button
-    class="feature-btn rounded-3xl border-transparent bg-[#d9d9d9] py-2 px-4 mr-4 text-[#2F0241] font-bold ">Favourites</button>
-</div>
-<!-- Cards display area -->
-<div *ngIf="activeCharacter === 'mina'">
-  <app-card></app-card>
+  <!-- Cards display area -->
+  <ng-container *ngIf="activeCharacter === 'mina'">
+    <app-card class="contents"></app-card>
+  </ng-container>
 </div>
