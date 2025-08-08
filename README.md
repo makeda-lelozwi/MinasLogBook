@@ -12,8 +12,9 @@ Other plans:
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. 
-## Checkpoint Reflections
 
+
+## Checkpoint Reflections
 ### Checkpoint One:  Base styles and navigation functionality
 Date completed: 2025.03.02 
 I created mock-ups using Figma which took 2 days to get a general idea of the page and user-flow. There were quite a few challenging moments in this initial stage:
@@ -34,8 +35,20 @@ I first took a C# Masterclass on Udemy (still in-progress). Then read up on .NET
 
 I didn't face many challenges because EF's documentation is very robust. I did use Cluade to help with installing certain .NET libraries and using the correct CLI commands but in general, the official documentation for Web API was very straight-forward. I spent some time also learning up on ADO.NET and how ORM's work overall.
 
+### Checkpoint Three: CRUD Functionality with Styling for Mina
+Still in progress
+Updated on: 2025.08.08
 
-### Next step: Implement CRUD functionality for Mina 
+The bulk of the work for Mina's 'dashbiards' are done. If she was a real person, she would be able to view all the stories that she comes up with for each matchbox, reread old stories, and add new ones. I'm also happy with the styles. I'm really happy with what I've worked on so far and I'm keen to keep the ball rolling and eventually complete this thing! There were a number of challenges for this checkpoint:
+
+  1. The cards for each story were overlapping across the page so it took a while to finally figure out how to make that stop but still keep to my design. 
+
+  2. Understanding RxJS and how to subscribe to the Observables and then use that data that comes back. I still slip up when using it and will need much more practice over time but I'm getting the gist. 
+
+  3. Styling for the story detail was also a bit of a pain trying to get the text to take up a larger amount of space but also enable the scrollbar if need-be (that wasn't an issue, the issue was that it would immediately mess up my design)
+
+
+### Next step: Update db to include image field and implement functionality to UPDATE the story entries 
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.2.
